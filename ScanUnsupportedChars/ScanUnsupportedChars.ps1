@@ -237,6 +237,14 @@ public class ListFiles
         disallowedChars.Add(0x0000005C); // 0x0000005C  = '\'
         disallowedChars.Add(0x0000007F); // 0x0000007F  = del delete
 
+        // CIFS mount remap
+        disallowedChars.Add(0x0000F02A); // 0x0000002A  = '*'
+        disallowedChars.Add(0x0000F03F); // 0x0000003F  = '?'
+        disallowedChars.Add(0x0000F03E); // 0x0000003E  = '>'
+        disallowedChars.Add(0x0000F03C); // 0x0000003C  = '<'
+        disallowedChars.Add(0x0000F03A); // 0x0000003A  = ':'
+        disallowedChars.Add(0x0000F07C); // 0x0000007C  = '|'
+
         // Unsupported control chars
         disallowedChars.Add(0x00000081); // high octet preset)
         disallowedChars.Add(0x0000008D); // ri reverse line feed
